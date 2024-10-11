@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#FFFFFF"
         android:orientation="horizontal"
@@ -22,15 +22,17 @@
             android:weightSum="100">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/tvA"
                 android:layout_width="33dp"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="center_horizontal|center_vertical"
                 android:text="A -" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/tvB"
                 android:layout_width="33dp"
-                android:layout_height="wrap_content"
+                android:layout_height="46dp"
+                android:gravity="center_horizontal|center_vertical"
                 android:text="B -" />
 
         </LinearLayout>
@@ -43,24 +45,29 @@
             android:orientation="vertical"
             android:weightSum="100">
 
-            <TextView
-                android:id="@+id/result"
+            <EditText
+                android:id="@+id/editText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:ems="10"
+                android:hint="Enter num 1"
+                android:inputType="number|numberDecimal"
+                android:onClick="onClickNum1" />
 
-            <TextView
-                android:id="@+id/textView13"
+            <EditText
+                android:id="@+id/editText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
-
+                android:ems="10"
+                android:hint="Enter num 2"
+                android:inputType="number|numberDecimal"
+                android:onClick="onClickNum2" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#FFFFFF"
         android:orientation="horizontal"
@@ -75,7 +82,7 @@
             android:weightSum="100">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/resultText"
                 android:layout_width="51dp"
                 android:layout_height="34dp"
                 android:autoText="true"
@@ -103,7 +110,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="horizontal"
         android:weightSum="100">
@@ -124,15 +131,17 @@
                 android:weightSum="100">
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/btAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="btAdd"
                     android:text="Add" />
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/btMult"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="btMult"
                     android:text="Multiply" />
             </LinearLayout>
 
@@ -144,18 +153,97 @@
                 android:weightSum="100">
 
                 <Button
-                    android:id="@+id/button8"
+                    android:id="@+id/btSub"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="btSub"
                     android:text="Substract" />
 
                 <Button
-                    android:id="@+id/button9"
+                    android:id="@+id/btDivide"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="btDiv"
                     android:text="Divide" />
+
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/btSin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="btSin"
+                    android:text="Sin" />
+
+                <Button
+                    android:id="@+id/btTan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="btTan"
+                    android:text="Tan" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/btCos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="btCos"
+                    android:text="Cos" />
+
+                <Button
+                    android:id="@+id/btSqrt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="btSqrt"
+                    android:text="Sqrt" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btPow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btPow"
+            android:text="Pow" />
     </LinearLayout>
 
 </LinearLayout>
